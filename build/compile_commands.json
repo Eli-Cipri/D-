@@ -1,0 +1,12 @@
+[
+{
+  "directory": "E:/curs C++/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -I\"E:/curs C++/.vscode/Cursuri/include\" -g -std=gnu++17 -o CMakeFiles\\Cursuri.dir\\src\\main.cpp.obj -c \"E:\\curs C++\\.vscode\\Cursuri\\src\\main.cpp\"",
+  "file": "E:\\curs C++\\.vscode\\Cursuri\\src\\main.cpp"
+},
+{
+  "directory": "E:/curs C++/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -I\"E:/curs C++/.vscode/Cursuri/include\" -g -std=gnu++17 -o CMakeFiles\\Cursuri.dir\\src\\structuri.cpp.obj -c \"E:\\curs C++\\.vscode\\Cursuri\\src\\structuri.cpp\"",
+  "file": "E:\\curs C++\\.vscode\\Cursuri\\src\\structuri.cpp"
+}
+]
