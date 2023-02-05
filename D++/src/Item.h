@@ -1,6 +1,7 @@
 #ifndef ITEM_H
 #define ITEM_H
-#include "Player.h"
+#include "misc.h"
+#include <string>
 #pragma once
 
 class Item 

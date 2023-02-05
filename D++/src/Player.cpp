@@ -15,8 +15,12 @@ Player::~Player()
 
 void Player::getPlayerName(std::string name)
 {
-    std::cin >> name;
     m_nume = name;
+}
+
+void Player::Attack()
+{
+    
 }
 
 

@@ -1,5 +1,5 @@
 #include "misc.h"
-#include "Player.h"
+
 
 
 misc::misc()
@@ -12,15 +12,12 @@ misc::~misc()
 
 }
 
-Player* misc::SetupPlayer(std::string name)
+ Player* misc::SetupPlayer()
 {
-    Player* yourName = new Player;
-    
-
+    Player* YourName = new Player;
+    std::string name;
     std::cout << "Enter your name adventurer" << std::endl;
     std::cin >> name;
-
-    
 
     std::cout << "Choose your class\n";
     std::cout << "Wizzard\n";
@@ -42,7 +39,7 @@ Player* misc::SetupPlayer(std::string name)
         std::cout << name << " Rogue: A cunning and agile character who specializes in stealth, thievery, and critical strikes, often dealing high damage from behind enemy lines." << std::endl;
     }
 
-    return yourName;
+    return YourName;
 }
 
 void misc::introScene()
@@ -57,8 +54,7 @@ void misc::introScene()
     if(choose == "yes")
     {
         std::cout << "Great let`s start the adventure!!"<< std::endl;
-        std::string name;
-        SetupPlayer(name);
+        SetupPlayer();
     }
     else if (choose == "no")
     {

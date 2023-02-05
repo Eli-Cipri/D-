@@ -3,19 +3,13 @@
 #include "misc.h"
 #pragma once
 
-class Wizard : public Player
+class Wizard 
 {
 public:
-    Wizard()
-    {
-        setAttackPower(30);
-    }
+    Wizard();
     ~Wizard();
 
-    void Attack() override
-    {
-        std::cout << "Player attacks with " << attackpower << std::endl;
-    }
+    void Attack();
 private:
 
 };

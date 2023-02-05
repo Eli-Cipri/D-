@@ -10,3 +10,8 @@ Warrior::~Warrior()
 
 }
 
+void Warrior::Attack()
+{
+    
+}
+

@@ -5,8 +5,15 @@ Rouge::Rouge()
 
 }
 
+
 Rouge::~Rouge()
 {
 
 }
+
+void Rouge::Attack()
+{
+    
+}
+
 

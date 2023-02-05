@@ -2,21 +2,18 @@
 #define ROUGE_H
 #include "misc.h"
 
+
 #pragma once
 
-class Rouge : public Player
+class Rouge 
 {
 public:
-    Rouge()
-    {
-        setAttackPower(30);
-    }
+    Rouge();
+    
     ~Rouge();
 
-    void Attack() override
-    {
-       std::cout << "Player attacks with " << attackpower << std::endl; 
-    }
+    void Attack();
+    
 
 private:
 

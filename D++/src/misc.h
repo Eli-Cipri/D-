@@ -1,10 +1,12 @@
 #ifndef MISC_H
 #define MISC_H
-#include "Player.h"
 #include "Rouge.h"
 #include "Warrior.h"
 #include "Wizard.h"
-#include "Item.h"
+#include "Item.h"  
+#include <iostream>
+#include <string>
+#include "Player.h"
 
 #pragma once
 
@@ -17,7 +19,7 @@ public:
     void introScene();
 
    
-    Player* SetupPlayer(std::string name);
+    Player* SetupPlayer();
 
 private:
 
