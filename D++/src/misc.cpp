@@ -1,4 +1,5 @@
 #include "misc.h"
+#include "Player.h"
 
 
 misc::misc()
@@ -11,17 +12,15 @@ misc::~misc()
 
 }
 
-
-
-Player* SetupPlayer(std::string name)
+Player* misc::SetupPlayer(std::string name)
 {
     Player* yourName = new Player;
-    Player YourName;
+    
 
     std::cout << "Enter your name adventurer" << std::endl;
     std::cin >> name;
 
-    YourName.getPlayerName(name);
+    
 
     std::cout << "Choose your class\n";
     std::cout << "Wizzard\n";
@@ -32,21 +31,21 @@ Player* SetupPlayer(std::string name)
     std::cin >> choose;
     if(choose == "Wizzard")
     {
-        std::cout << name << "Wizard: A spell caster with mastery over elemental magic, capable of dealing high damage and providing support to allies." << std::endl;
+        std::cout << name << " Wizard: A spell caster with mastery over elemental magic, capable of dealing high damage and providing support to allies." << std::endl;
     } 
     else if (choose == "Warrior")
     {
-        std::cout << name << "Warrior: A melee fighter with high physical strength and durability, specializing in weapons and armor." << std::endl;
+        std::cout << name << " Warrior: A melee fighter with high physical strength and durability, specializing in weapons and armor." << std::endl;
     }
     else
     {
-        std::cout << name << "Rogue: A cunning and agile character who specializes in stealth, thievery, and critical strikes, often dealing high damage from behind enemy lines." << std::endl;
+        std::cout << name << " Rogue: A cunning and agile character who specializes in stealth, thievery, and critical strikes, often dealing high damage from behind enemy lines." << std::endl;
     }
 
     return yourName;
 }
 
-void introScene()
+void misc::introScene()
 {
     std::cout << "In a small kingdom ruled by a kind and fair king, dark forces have arisen. A powerful sorceress named Morgath has taken control of a nearby castle and is threatening to overthrow the king and enslave the people. The players are heroes who have been called upon to defeat Morgath and restore peace to the kingdom. They must brave treacherous forests, navigate dark dungeons, and face off against fearsome monsters to reach the castle and defeat the sorceress in a final showdown. With courage, cunning, and their own unique abilities, they are the kingdom's only hope" << std::endl;
 
@@ -70,6 +69,7 @@ void introScene()
         std::cout << "Error , you have to choose between yes or no!!" << std::endl; 
     }
 }
+
 
 
 

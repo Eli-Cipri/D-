@@ -19,8 +19,9 @@ void Player::getPlayerName(std::string name)
     m_nume = name;
 }
 
-void Player::Attack()
+
+void Player::inventorycheck()
 {
-    std::cout << "Player attacks " << std::endl;
+    
 }
 

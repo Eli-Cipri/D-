@@ -4,6 +4,7 @@
 #include "Rouge.h"
 #include "Warrior.h"
 #include "Wizard.h"
+#include "Item.h"
 
 #pragma once
 

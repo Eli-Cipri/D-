@@ -1,14 +1,21 @@
 #ifndef WIZARD_H
 #define WIZARD_H
-#include "Player.h"
+#include "misc.h"
 #pragma once
 
 class Wizard : public Player
 {
 public:
-    Wizard();
+    Wizard()
+    {
+        setAttackPower(30);
+    }
     ~Wizard();
 
+    void Attack() override
+    {
+        std::cout << "Player attacks with " << attackpower << std::endl;
+    }
 private:
 
 };

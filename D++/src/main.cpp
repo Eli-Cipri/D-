@@ -7,7 +7,8 @@
 
 int main(int argc, char const *argv[])
 {
-     introScene();
+    misc m;
+     m.introScene();
     
     return 0;
 }
