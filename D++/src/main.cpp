@@ -6,12 +6,16 @@
 
 
 
+
 int main(int argc, char const *argv[])
 {
     misc m;
     m.introScene();
-    Music intro;
-    intro.playMusic();
+//     music.play();
+//    while (music.getStatus() == sf::Music::Playing) 
+//    {
+//       // do other things here
+//    }
     
     return 0;
 }

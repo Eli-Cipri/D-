@@ -3,7 +3,7 @@
 #include "misc.h"
 #pragma once
 
-class Wizard 
+class Wizard : public Player
 {
 public:
     Wizard();

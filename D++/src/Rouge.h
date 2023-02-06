@@ -5,7 +5,7 @@
 
 #pragma once
 
-class Rouge 
+class Rouge : public Player
 {
 public:
     Rouge();

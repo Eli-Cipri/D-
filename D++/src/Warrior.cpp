@@ -12,6 +12,7 @@ Warrior::~Warrior()
 
 void Warrior::Attack()
 {
+    std::cout << "Warrior attacks " << std::endl;
     
 }
 

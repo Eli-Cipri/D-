@@ -4,7 +4,7 @@
 
 #pragma once
 
-class Warrior 
+class Warrior: public Player
 {
 public:
     Warrior();

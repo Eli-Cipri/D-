@@ -1,21 +1,18 @@
-#ifndef MUSIC_H
-#define MUSIC_H
-#include "misc.h"
-#include <windows.h>
-#include <mmsystem.h>
+// #ifndef MUSIC_H
+// #define MUSIC_H
+// #include <SFML/Audio.hpp>
+// #pragma once
 
-#pragma once
-#pragma comment(lib, "winmm.lib")
+// class Music
+// {
+// public:
+//     Music();
+//     ~Music();
 
-class Music
-{
-public:
-    Music();
-    ~Music();
+//     std::string music();
 
-    bool playMusic();
-private:
+// private:
 
-};
+// };
 
-#endif
+// #endif
