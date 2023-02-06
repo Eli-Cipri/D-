@@ -35,3 +35,4 @@ endforeach()
 add_executable(${PROJECT_N} ${SRCS})
 
 target_include_directories(${PROJECT_N} PUBLIC include)
+target_link_libraries(D++ winmm)
