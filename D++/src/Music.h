@@ -9,20 +9,13 @@
  {
  public:
     
-    Music()
-    {
-        
-    }
+    Music();
     ~Music();
 
-     
-    void playMainMenu();
+   void playMainMenu();
    void playCrossroads();
    void playBattleFinal();
-
-    
-
-    
+  
 
  private:
     sf::SoundBuffer m_mainMenuBuffer;
