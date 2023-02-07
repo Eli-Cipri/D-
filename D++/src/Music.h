@@ -12,9 +12,13 @@
     Music();
     ~Music();
 
+   void inItSounds();
    void playMainMenu();
    void playCrossroads();
    void playBattleFinal();
+   void stopMusicMenu();
+   void stopMusicCrr();
+   void stopMusicFb();
   
 
  private:
