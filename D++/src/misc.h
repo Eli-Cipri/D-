@@ -3,10 +3,12 @@
 #include "Rouge.h"
 #include "Warrior.h"
 #include "Wizard.h"
-#include "Item.h"  
 #include <iostream>
-#include <string>
-#include "Player.h"
+#include <cstdlib>
+#include <conio.h>
+#include "Music.h"
+
+
 
 #pragma once
 
@@ -16,11 +18,14 @@ public:
     misc();
     ~misc();
 
-    void introScene();
+    bool introScene();
 
-   
+    void clear_screen()
+    {
+        system("cls");
+    }
     Player* SetupPlayer();
-
+    void pres_any_key();
 private:
 
 };

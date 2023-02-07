@@ -1,8 +1,10 @@
 #include "Rouge.h"
 
-Rouge::Rouge()
+Rouge::Rouge(std::string& m_nume)
 {
-
+    set_playerName(m_nume);
+    set_damage(20);
+    set_health(40);
 }
 
 

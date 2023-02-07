@@ -1,16 +1,17 @@
 #ifndef WARRIOR_H
 #define WARRIOR_H
-#include "misc.h"
+#include "Player.h"
+
 
 #pragma once
 
 class Warrior: public Player
 {
 public:
-    Warrior();
+    Warrior(std::string& m_nume);
     ~Warrior();
 
-    void Attack();
+    void Attack() override;
     
 private:
 

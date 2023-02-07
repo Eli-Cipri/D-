@@ -35,5 +35,4 @@ endforeach()
 add_executable(${PROJECT_N} ${SRCS})
 
 target_include_directories(${PROJECT_N} PUBLIC include)
-# CFLAGS (-I"E:\\sfml\\SFML-2.5.1\\include")
-# LIBS ( -L"E:\\sfml\\SFML-2.5.1\\lib" -lsfml-graphics -lsfml-window -lsfml-system)
+

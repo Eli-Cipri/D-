@@ -1,7 +1,6 @@
 #ifndef ITEM_H
 #define ITEM_H
-#include "misc.h"
-#include <string>
+#include <iostream>
 #pragma once
 
 class Item 
@@ -15,8 +14,9 @@ public:
     int Defence;
     std::string ItemType;
 
+    std::string getPlayerName();
 private:
-
+    std::string m_nume;
 };
 
 #endif

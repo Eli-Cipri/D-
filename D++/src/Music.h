@@ -1,18 +1,38 @@
-// #ifndef MUSIC_H
-// #define MUSIC_H
-// #include <SFML/Audio.hpp>
-// #pragma once
+ #ifndef MUSIC_H
+ #define MUSIC_H
 
-// class Music
-// {
-// public:
-//     Music();
-//     ~Music();
+#include <SFML/Audio.hpp>
+ #include <SFML/System.hpp>
+#pragma once
 
-//     std::string music();
+ class Music
+ {
+ public:
+    
+    Music()
+    {
+        
+    }
+    ~Music();
 
-// private:
+     
+    void playMainMenu();
+   void playCrossroads();
+   void playBattleFinal();
 
-// };
+    
 
-// #endif
+    
+
+ private:
+    sf::SoundBuffer m_mainMenuBuffer;
+    sf::SoundBuffer m_crossroadsBuffer;
+    sf::SoundBuffer m_battleFinalBuffer;
+
+    sf::Sound m_mainMenuSound;
+    sf::Sound m_crossroadsSound;
+    sf::Sound m_battleFinalSound;
+
+ };
+
+ #endif

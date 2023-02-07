@@ -1,6 +1,6 @@
 #ifndef ROUGE_H
 #define ROUGE_H
-#include "misc.h"
+#include "Player.h"
 
 
 #pragma once
@@ -8,11 +8,11 @@
 class Rouge : public Player
 {
 public:
-    Rouge();
+    Rouge(std::string& m_nume);
     
     ~Rouge();
 
-    void Attack();
+    void Attack() override;
     
 
 private:
