@@ -2,7 +2,7 @@
  #define MUSIC_H
 
 #include <SFML/Audio.hpp>
- #include <SFML/System.hpp>
+#include <SFML/System.hpp>
 #pragma once
 
  class Music
