@@ -8,7 +8,7 @@ class RougeItems : public Item
 public:
     RougeItems();
     ~RougeItems();
-    virtual void display();
+     void display() override ;
 private:
 
 };

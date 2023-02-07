@@ -8,7 +8,7 @@ class WarriorItems : public Item
 public:
     WarriorItems();
     ~WarriorItems();
-    virtual void display();
+     void display() override;
 private:
 
 };

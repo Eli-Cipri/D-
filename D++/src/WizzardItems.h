@@ -9,7 +9,7 @@ public:
     WizzardItems();
     ~WizzardItems();
 
-    virtual void display();
+    void display() override;
 
 private:
 

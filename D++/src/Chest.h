@@ -3,14 +3,15 @@
 #include "misc.h"
 #include "Player.h"
 #include <map>
+#include <algorithm>
 #pragma once
 
-class Chest 
+class Chest  
 {
 public:
     Chest();
     ~Chest();
-    void openChest(int classType);
+    void openChest();
 private:
     std::vector<Item*> items;
     

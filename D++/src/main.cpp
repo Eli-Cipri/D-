@@ -7,6 +7,8 @@
 
 int main(int argc, char const *argv[])
 {   
+   
+    Chest chest;
     CrossRoads go;
     Music play_sound;
     misc m,n;
@@ -18,7 +20,7 @@ int main(int argc, char const *argv[])
     play_sound.playCrossroads();
     go.crossRoads();
     play_sound.stopMusicCrr();
-
+    
     
     
     
