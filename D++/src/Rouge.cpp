@@ -7,7 +7,6 @@ Rouge::Rouge(std::string& m_nume)
     set_health(40);
 }
 
-
 Rouge::~Rouge()
 {
 

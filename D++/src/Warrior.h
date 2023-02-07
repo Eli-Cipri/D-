@@ -5,12 +5,12 @@
 
 #pragma once
 
-class Warrior: public Player
+class Warrior: public Player,Item
 {
 public:
     Warrior(std::string& m_nume);
     ~Warrior();
-
+    
     void Attack() override;
     
 private:

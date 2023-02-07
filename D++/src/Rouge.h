@@ -5,7 +5,7 @@
 
 #pragma once
 
-class Rouge : public Player
+class Rouge : public Player,Item
 {
 public:
     Rouge(std::string& m_nume);

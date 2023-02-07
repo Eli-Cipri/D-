@@ -13,7 +13,7 @@ public:
     int MagicPower;
     int Defence;
     std::string ItemType;
-
+    virtual void display();
     std::string getPlayerName();
 private:
     std::string m_nume;
