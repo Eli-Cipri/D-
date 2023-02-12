@@ -8,7 +8,7 @@
 class Warrior: public Player
 {
 public:
-    Warrior(std::string& m_nume);
+    Warrior();
     ~Warrior();
     
     void Attack() override;

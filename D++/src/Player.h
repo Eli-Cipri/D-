@@ -7,29 +7,38 @@
 
 #pragma once
 
-enum playerType {wizard= 1,warrior= 2,rouge= 3};
+enum class ClassType {
+  WARRIOR,
+  MAGE,
+  ROGUE
+};
 class Player
 {
 public:
-    Player( );
+    Player(std::string name,ClassType type );
     virtual ~Player();
 
-    void set_playerName(std::string& m_nume);
+    
     void set_damage(const int& m_damage);
     void set_health(const int& m_health);
-    void setPlayerType(const playerType& player_Type);
+    
+    std::string name() const { return name_; }
+    ClassType class_type() const { return class_type_; }
+    const std::vector<std::string>& inventory() const { return inventory_; }
 
-    std::string getPlayerName(std::string m_nume);
-    const playerType getType();
+    void AddToInventory(const std::string& item) { inventory_.push_back(item); }  
+    
+    
     int get_damge();
     int get_health();
     virtual void Attack();
-    void inventorycheck();
-    std::vector<std::string> inventory;
-    Player(playerType type) : player_Type(type) {};
-    playerType player_Type;
+   
+    
+    
 private:
-    std::string m_nume;
+    std::string name_;
+    ClassType class_type_;
+    std::vector<std::string> inventory_;
     int m_damage;
     int m_health;
     

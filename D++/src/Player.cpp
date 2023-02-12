@@ -1,6 +1,7 @@
 #include "Player.h"
 
-Player::Player()
+Player::Player(std::string name,ClassType type):
+name_(name), class_type_(type)
 {
 
 }
@@ -10,10 +11,7 @@ Player::~Player()
 
 }
 
-void Player::set_playerName(std::string& m_nume)
-{
-    this->m_nume = m_nume;
-}
+
 
 void Player::set_damage(const int& m_damage)
 {
@@ -27,21 +25,6 @@ void Player::set_health(const int& m_health)
     
 }
 
-void Player::setPlayerType(const playerType& player_Type)
-{
-    this->player_Type = player_Type;
-}
-
-
-std::string Player::getPlayerName(std::string name)
-{
-    return name;
-}
-
-const playerType Player::getType()
-{
-    return player_Type;
-}
 
 int Player::get_damge()
 {
@@ -59,13 +42,7 @@ void Player::Attack()
 }
 
 
-void Player::inventorycheck()
-{
-     for (const auto &item : inventory) 
-    {
-        //std::cout << item->;
-    }
-}
+
 
 
 

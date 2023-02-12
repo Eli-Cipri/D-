@@ -32,20 +32,20 @@ void clear_screen()
     std::cout << "3.rouge\n";
 
     std::cin >> chose;
-    playerType type;
+    ClassType type;
     switch (chose)
     {
     case 1:
         std::cout << "You chose wizard " << name << std::endl;
-        type = playerType::wizard; 
+        type = ClassType::MAGE; 
         break;
     case 2:
         std::cout << "You chose warrior " << name << std::endl;
-        type = playerType::warrior; 
+        type = ClassType::WARRIOR; 
         break;
     case 3:
         std::cout << "You chose rouge " << name << std::endl;
-        type = playerType::rouge; 
+        type = ClassType::ROGUE; 
         break; 
     default:
         std::cout << "Invalid input you need to chose between these three: wizard/warrior/rouge" << std::endl;
@@ -79,37 +79,40 @@ void misc::pres_any_key()
     clear_screen();
 }
 
-void misc::openChest(Player& player)
+void misc::ChestScene(Player& player)
 {
-    clear_screen();
-   std::cout << "You have found a chest! Do you want to open it? (yes/no): ";
-        std::string choice;
-        std::cin >> choice;
+     std::cout << player.name() << " comes across a chest." << std::endl;
+  std::cout << "Do you want to open it? (y/n)" << std::endl;
 
-        if (choice == "yes") 
-        {
-            if (player.player_Type == playerType::wizard) 
-            {
-                player.inventory.push_back("wand");
-                std::cout << "You received a wand." << std::endl;
-            } else if (player.player_Type == playerType::warrior) 
-            {
-                player.inventory.push_back("sword");
-                std::cout << "You received a sword." << std::endl;
-            } else if (player.player_Type == playerType::rouge) 
-            {
-                player.inventory.push_back("bow");
-                std::cout << "You received a bow." << std::endl;
-            }
-        } 
-        else 
-        {
-            std::cout << "You decided not to open the chest." << std::endl;
-        }
+  char open_chest;
+  std::cin >> open_chest;
+
+  if (open_chest == 'y') {
+    CreateChestItems(player);
+    std::cout << "You have received the following items:" << std::endl;
+    for (const auto& item : player.inventory()) {
+      std::cout << item << std::endl;
+    }
+  } else {
+    std::cout << "You leave the chest unopened." << std::endl;
+  }
 }
 
 
 
+void misc::CreateChestItems(Player& player)
+{
+    if (player.class_type() == ClassType::WARRIOR) {
+    player.AddToInventory("Sword");
+    player.AddToInventory("Shield");
+  } else if (player.class_type() == ClassType::MAGE) {
+    player.AddToInventory("Wand");
+    player.AddToInventory("Potion");
+  } else if (player.class_type() == ClassType::ROGUE) {
+    player.AddToInventory("Dagger");
+    player.AddToInventory("Stealth Cloak");
+  }
+}
 
 bool misc::introScene()
 {
@@ -156,24 +159,22 @@ void misc::crossRoads()
     {
     case 1 :
         std::cout << "So you chose Dark Forest, it's not the wisest choice, but you'll manage " << std::endl;
+        
         break;
     case 2 :
-    
         std::cout << "Wise choice" << std::endl;
+        
         break;
     case 3 :
-    
         std::cout << "So you chose death" << std::endl;
+        
         break;
     default:
+        std::cout << "Invalid input" << std::endl;
         break;
     }
     
 }
 
-void misc::clearPlayer(Player* player)
-{
-    delete player;
-}
 
 

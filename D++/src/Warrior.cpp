@@ -1,9 +1,7 @@
 #include "Warrior.h"
 
-Warrior::Warrior(std::string& m_nume)
+Warrior::Warrior()
 {
-    set_playerName(m_nume);
-    setPlayerType(warrior);
     set_damage(20);
     set_health(40);
 }

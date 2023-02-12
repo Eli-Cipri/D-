@@ -8,7 +8,7 @@
 class Rouge : public Player
 {
 public:
-    Rouge(std::string& m_nume);
+    Rouge(std::string name,ClassType type);
     
     ~Rouge();
 
@@ -16,7 +16,8 @@ public:
     
 
 private:
-
+    std::string m_nume;
+    ClassType type_;
 };
 
 #endif

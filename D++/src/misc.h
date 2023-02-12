@@ -11,14 +11,14 @@
 
 
 
-enum path {DarkForest=1  , Village=2  ,Cave=3  };
+enum path {DarkForest  , Village  ,Cave };
 
 
 
 
 #pragma once
 
-class misc
+class misc : public Player
 {
 public:
     misc();
@@ -29,10 +29,11 @@ public:
     
     Player* SetupPlayer();
     void pres_any_key();
-    void openChest(Player& player);
-    void clearPlayer(Player* player);
+    void ChestScene(Player& player);
+    void CreateChestItems(Player& player);
     
 private:
+    std::vector<std::string> inventory;
    ;
 };
 

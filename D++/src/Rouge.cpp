@@ -1,9 +1,8 @@
 #include "Rouge.h"
 
-Rouge::Rouge(std::string& m_nume)
+Rouge::Rouge(std::string name,ClassType type):
+m_nume(name),type_(type)
 {
-    set_playerName(m_nume);
-    setPlayerType(rouge);
     set_damage(20);
     set_health(40);
 }
