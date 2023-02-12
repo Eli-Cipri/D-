@@ -3,6 +3,7 @@
 Wizard::Wizard(std::string& m_nume)
 {
     set_playerName(m_nume);
+    setPlayerType(wizard);
     set_damage(20);
     set_health(40);
 }
@@ -18,3 +19,8 @@ void Wizard::Attack()
     
 }
 
+
+Wizard::Wizard()
+{
+    
+}

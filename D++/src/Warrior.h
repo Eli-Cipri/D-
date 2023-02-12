@@ -5,7 +5,7 @@
 
 #pragma once
 
-class Warrior: public Player,Item
+class Warrior: public Player
 {
 public:
     Warrior(std::string& m_nume);

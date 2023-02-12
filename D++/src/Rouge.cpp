@@ -3,6 +3,7 @@
 Rouge::Rouge(std::string& m_nume)
 {
     set_playerName(m_nume);
+    setPlayerType(rouge);
     set_damage(20);
     set_health(40);
 }

@@ -11,45 +11,64 @@ misc::~misc()
 {
 
 }
+void clear_screen()
+{
+    system("cls");
+}
+
 
  Player* misc::SetupPlayer()
 {
     clear_screen();
-    Player* YourName = new Player;
-    std::string name;
+    std::string name,player_type;
     std::cout << "Enter your name adventurer" << std::endl;
     std::cin >> name;
 
+    int chose;
     clear_screen();
     std::cout << "Choose your class\n";
-    std::cout << "Wizzard\n";
-    std::cout << "Warrior\n";
-    std::cout << "Rouge\n";
+    std::cout << "1.wizard\n";
+    std::cout << "2.warrior\n";
+    std::cout << "3.rouge\n";
 
+    std::cin >> chose;
+    playerType type;
+    switch (chose)
+    {
+    case 1:
+        std::cout << "You chose wizard " << name << std::endl;
+        type = playerType::wizard; 
+        break;
+    case 2:
+        std::cout << "You chose warrior " << name << std::endl;
+        type = playerType::warrior; 
+        break;
+    case 3:
+        std::cout << "You chose rouge " << name << std::endl;
+        type = playerType::rouge; 
+        break; 
+    default:
+        std::cout << "Invalid input you need to chose between these three: wizard/warrior/rouge" << std::endl;
+        break;
+    }
 
-    std::string choose;
-    std::cin >> choose;
-    if(choose == "Wizzard")
+    if(player_type == "wizard")
     {
-        clear_screen();
-        std::cout << name << " the "<< " Wizard: A spell caster with mastery over elemental magic, capable of dealing high damage and providing support to allies." << std::endl;
-        
-    } 
-    else if (choose == "Warrior")
+        Player* player = new Wizard(name);
+        return player;
+    }
+    else if(player_type == "warrior")
     {
-        clear_screen();
-        std::cout << name << " the "<< " Warrior: A melee fighter with high physical strength and durability, specializing in weapons and armor." << std::endl;
-        
+        Player* player = new Warrior(name);
+        return player;
     }
     else
-    {   
-        clear_screen();
-        std::cout << name << " the "<< " Rogue: A cunning and agile character who specializes in stealth, thievery, and critical strikes, often dealing high damage from behind enemy lines." << std::endl;
-        
+    {
+        Player* player = new Rouge(name);
+        return player;
     }
     
-
-    return YourName;
+    
 }
 
 void misc::pres_any_key()
@@ -59,6 +78,38 @@ void misc::pres_any_key()
     getch();
     clear_screen();
 }
+
+void misc::openChest(Player& player)
+{
+    clear_screen();
+   std::cout << "You have found a chest! Do you want to open it? (yes/no): ";
+        std::string choice;
+        std::cin >> choice;
+
+        if (choice == "yes") 
+        {
+            if (player.player_Type == playerType::wizard) 
+            {
+                player.inventory.push_back("wand");
+                std::cout << "You received a wand." << std::endl;
+            } else if (player.player_Type == playerType::warrior) 
+            {
+                player.inventory.push_back("sword");
+                std::cout << "You received a sword." << std::endl;
+            } else if (player.player_Type == playerType::rouge) 
+            {
+                player.inventory.push_back("bow");
+                std::cout << "You received a bow." << std::endl;
+            }
+        } 
+        else 
+        {
+            std::cout << "You decided not to open the chest." << std::endl;
+        }
+}
+
+
+
 
 bool misc::introScene()
 {
@@ -91,6 +142,38 @@ bool misc::introScene()
     return true;
 }
 
+void misc::crossRoads()
+{
+    
+    int choose;
+    std::cout << "Choose the road carefully because you don't know what awaits you,you can choose from\n ";
+    std::cout << "1.DarkForest\n";
+    std::cout << "2.Village\n";
+    std::cout << "3.Cave\n";
+    std::cin >> choose;
 
+    switch (choose)
+    {
+    case 1 :
+        std::cout << "So you chose Dark Forest, it's not the wisest choice, but you'll manage " << std::endl;
+        break;
+    case 2 :
+    
+        std::cout << "Wise choice" << std::endl;
+        break;
+    case 3 :
+    
+        std::cout << "So you chose death" << std::endl;
+        break;
+    default:
+        break;
+    }
+    
+}
+
+void misc::clearPlayer(Player* player)
+{
+    delete player;
+}
 
 

@@ -7,6 +7,7 @@
 class Wizard : public Player
 {
 public:
+    Wizard();
     Wizard(std::string& m_nume);
     ~Wizard();
     

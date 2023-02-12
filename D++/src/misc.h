@@ -7,8 +7,11 @@
 #include <cstdlib>
 #include <conio.h>
 #include "Music.h"
-#include "CrossRoads.h"
-#include "Chest.h"
+#include "Enemy.h"
+
+
+
+enum path {DarkForest=1  , Village=2  ,Cave=3  };
 
 
 
@@ -22,15 +25,15 @@ public:
     ~misc();
 
     bool introScene();
-
-    void clear_screen()
-    {
-        system("cls");
-    }
+    void crossRoads();
+    
     Player* SetupPlayer();
     void pres_any_key();
+    void openChest(Player& player);
+    void clearPlayer(Player* player);
+    
 private:
-
+   ;
 };
 
 #endif

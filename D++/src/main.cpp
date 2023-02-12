@@ -7,19 +7,23 @@
 
 int main(int argc, char const *argv[])
 {   
-   
-    Chest chest;
-    CrossRoads go;
     Music play_sound;
-    misc m,n;
+    misc m;
+    Enemy enemy ;
     play_sound.inItSounds();
     play_sound.playMainMenu();
     m.introScene();
-    n.pres_any_key();
+    m.pres_any_key();
     play_sound.stopMusicMenu();
     play_sound.playCrossroads();
-    go.crossRoads();
+    m.crossRoads();
+    Player player;
+    m.openChest(player);
     play_sound.stopMusicCrr();
+    enemy.generateEnemy();
+    enemy.printEnemy();
+    
+    
     
     
     

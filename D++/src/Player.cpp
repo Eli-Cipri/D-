@@ -27,14 +27,20 @@ void Player::set_health(const int& m_health)
     
 }
 
-void Player::playerType()
+void Player::setPlayerType(const playerType& player_Type)
 {
-    
+    this->player_Type = player_Type;
 }
+
 
 std::string Player::getPlayerName(std::string name)
 {
     return name;
+}
+
+const playerType Player::getType()
+{
+    return player_Type;
 }
 
 int Player::get_damge()
@@ -57,12 +63,9 @@ void Player::inventorycheck()
 {
      for (const auto &item : inventory) 
     {
-        std::cout << item->getPlayerName() << '\n';
+        //std::cout << item->;
     }
 }
 
-void Player::addInInventory(Item* items)
-{
-    inventory.push_back(items);
-}
+
 
