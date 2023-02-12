@@ -10,6 +10,7 @@ int main(int argc, char const *argv[])
     Music play_sound;
     misc m;
     Enemy enemy ;
+    Player player;
     play_sound.inItSounds();
     play_sound.playMainMenu();
     m.introScene();
@@ -17,6 +18,7 @@ int main(int argc, char const *argv[])
     play_sound.stopMusicMenu();
     play_sound.playCrossroads();
     m.crossRoads();
+    m.ChestScene(player);
     play_sound.stopMusicCrr();
     enemy.generateEnemy();
     enemy.printEnemy();

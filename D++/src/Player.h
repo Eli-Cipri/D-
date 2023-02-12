@@ -9,24 +9,23 @@
 
 enum class ClassType {
   WARRIOR,
-  MAGE,
+  WIZARD,
   ROGUE
 };
 class Player
 {
 public:
-    Player(std::string name,ClassType type );
+    Player();
     virtual ~Player();
 
     
     void set_damage(const int& m_damage);
     void set_health(const int& m_health);
-    
     std::string name() const { return name_; }
     ClassType class_type() const { return class_type_; }
     const std::vector<std::string>& inventory() const { return inventory_; }
 
-    void AddToInventory(const std::string& item) { inventory_.push_back(item); }  
+    void AddToInventory(const std::string& item);
     
     
     int get_damge();
@@ -36,6 +35,7 @@ public:
     
     
 private:
+    std::string m_name;
     std::string name_;
     ClassType class_type_;
     std::vector<std::string> inventory_;

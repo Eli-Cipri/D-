@@ -1,11 +1,10 @@
 #include "misc.h"
 
-
-
 misc::misc()
 {
 
 }
+
 
 misc::~misc()
 {
@@ -37,7 +36,7 @@ void clear_screen()
     {
     case 1:
         std::cout << "You chose wizard " << name << std::endl;
-        type = ClassType::MAGE; 
+        type = ClassType::WIZARD; 
         break;
     case 2:
         std::cout << "You chose warrior " << name << std::endl;
@@ -54,17 +53,17 @@ void clear_screen()
 
     if(player_type == "wizard")
     {
-        Player* player = new Wizard(name);
+        Player* player = new Wizard;
         return player;
     }
     else if(player_type == "warrior")
     {
-        Player* player = new Warrior(name);
+        Player* player = new Warrior;
         return player;
     }
     else
     {
-        Player* player = new Rouge(name);
+        Player* player = new Rouge;
         return player;
     }
     
@@ -79,9 +78,26 @@ void misc::pres_any_key()
     clear_screen();
 }
 
+void misc::CreateChestItems(Player& player)
+{
+    clear_screen();
+    if (player.class_type() == ClassType::WARRIOR) {
+    player.AddToInventory("Sword");
+    player.AddToInventory("Shield");
+  } else if (player.class_type() == ClassType::WIZARD) {
+    player.AddToInventory("Wand");
+    player.AddToInventory("Potion");
+  } else if (player.class_type() == ClassType::ROGUE) {
+    player.AddToInventory("Dagger");
+    player.AddToInventory("Stealth Cloak");
+  }
+}
+
+
 void misc::ChestScene(Player& player)
 {
-     std::cout << player.name() << " comes across a chest." << std::endl;
+    clear_screen();
+    std::cout << player.name() << " comes across a chest." << std::endl;
   std::cout << "Do you want to open it? (y/n)" << std::endl;
 
   char open_chest;
@@ -98,21 +114,6 @@ void misc::ChestScene(Player& player)
   }
 }
 
-
-
-void misc::CreateChestItems(Player& player)
-{
-    if (player.class_type() == ClassType::WARRIOR) {
-    player.AddToInventory("Sword");
-    player.AddToInventory("Shield");
-  } else if (player.class_type() == ClassType::MAGE) {
-    player.AddToInventory("Wand");
-    player.AddToInventory("Potion");
-  } else if (player.class_type() == ClassType::ROGUE) {
-    player.AddToInventory("Dagger");
-    player.AddToInventory("Stealth Cloak");
-  }
-}
 
 bool misc::introScene()
 {

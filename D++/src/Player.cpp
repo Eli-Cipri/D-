@@ -1,7 +1,7 @@
 #include "Player.h"
 
-Player::Player(std::string name,ClassType type):
-name_(name), class_type_(type)
+Player::Player()
+
 {
 
 }
@@ -25,6 +25,11 @@ void Player::set_health(const int& m_health)
     
 }
 
+
+void Player::AddToInventory(const std::string& item)
+{
+    inventory_.push_back(item); 
+}
 
 int Player::get_damge()
 {

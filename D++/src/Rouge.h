@@ -8,8 +8,7 @@
 class Rouge : public Player
 {
 public:
-    Rouge(std::string name,ClassType type);
-    
+    Rouge();
     ~Rouge();
 
     void Attack() override;
