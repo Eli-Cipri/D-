@@ -1,7 +1,7 @@
 #include "Rouge.h"
 
-Rouge::Rouge(std::string name,ClassType type):
-m_nume(name),type_(type)
+Rouge::Rouge(name,ROUGE):
+
 {
     set_damage(20);
     set_health(40);
