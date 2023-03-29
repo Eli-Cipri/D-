@@ -1,7 +1,10 @@
 #include "Player.h"
 
-Player::Player()
+Player::Player(std::string name): name_(name)
+{
 
+}
+Player::Player()
 {
 
 }
@@ -26,9 +29,14 @@ void Player::set_health(const int& m_health)
 }
 
 
-void Player::AddToInventory(const std::string& item)
+void Player::addItemToInventory(const Item* item)
 {
-    inventory_.push_back(item); 
+    Item item1("Health Potion", 3);
+    Item item2("Mana Potion", 3);
+    Item item3("Gold", 100);
+    player.inventory().addItem(item1);
+    player.inventory().addItem(item2);
+    player.inventory().addItem(item3);
 }
 
 int Player::get_damge()

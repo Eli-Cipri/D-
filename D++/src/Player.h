@@ -2,7 +2,7 @@
 #define PLAYER_H
 #include <iostream>
 #include <vector>
-#include "Item.h"
+#include "Inventory.h"
 
 
 #pragma once
@@ -15,18 +15,18 @@ enum class ClassType {
 class Player
 {
 public:
+    Player(std::string name) : name_(name) {};
     Player();
     virtual ~Player();
 
     
     void set_damage(const int& m_damage);
     void set_health(const int& m_health);
-    std::string name() const { return name_; }
     ClassType class_type() const { return class_type_; }
-    const std::vector<std::string>& inventory() const { return inventory_; }
-
-    void AddToInventory(const std::string& item);
+    const Inventory& inventory() const {return inventory_;}
+    std::string name() const { return name_; }
     
+    void addItemToInventory(const Item* item);
     
     int get_damge();
     int get_health();
@@ -35,10 +35,9 @@ public:
     
     
 private:
-    std::string m_name;
     std::string name_;
     ClassType class_type_;
-    std::vector<std::string> inventory_;
+    Inventory inventory_;
     int m_damage;
     int m_health;
     

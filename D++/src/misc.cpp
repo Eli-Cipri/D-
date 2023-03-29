@@ -78,40 +78,31 @@ void misc::pres_any_key()
     clear_screen();
 }
 
-void misc::CreateChestItems(Player& player)
-{
-    clear_screen();
-    if (player.class_type() == ClassType::WARRIOR) {
-    player.AddToInventory("Sword");
-    player.AddToInventory("Shield");
-  } else if (player.class_type() == ClassType::WIZARD) {
-    player.AddToInventory("Wand");
-    player.AddToInventory("Potion");
-  } else if (player.class_type() == ClassType::ROGUE) {
-    player.AddToInventory("Dagger");
-    player.AddToInventory("Stealth Cloak");
-  }
-}
+
 
 
 void misc::ChestScene(Player& player)
 {
     clear_screen();
     std::cout << player.name() << " comes across a chest." << std::endl;
-  std::cout << "Do you want to open it? (y/n)" << std::endl;
+    std::cout << "Do you want to open it? (y/n)" << std::endl;
 
-  char open_chest;
-  std::cin >> open_chest;
+    char open_chest;
+    std::cin >> open_chest;
 
-  if (open_chest == 'y') {
-    CreateChestItems(player);
+    if (open_chest == 'y') 
+    {
+    addItemToInventory(player);
     std::cout << "You have received the following items:" << std::endl;
-    for (const auto& item : player.inventory()) {
-      std::cout << item << std::endl;
+    for (const auto& item : player.inventory().items()) 
+    {
+      std::cout << item.name() << " x " << item.quantity() << std::endl;
     }
-  } else {
+    } 
+    else 
+    {
     std::cout << "You leave the chest unopened." << std::endl;
-  }
+    }
 }
 
 

@@ -30,10 +30,10 @@ public:
     Player* SetupPlayer();
     void pres_any_key();
     void ChestScene(Player& player);
-    void CreateChestItems(Player& player);
+    
     
 private:
-    std::vector<std::string> inventory;
+    
    ;
 };
 
