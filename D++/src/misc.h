@@ -29,7 +29,7 @@ public:
     
     Player* SetupPlayer();
     void pres_any_key();
-    void ChestScene(Player& player);
+    void ChestScene(Player* player);
     
     
 private:

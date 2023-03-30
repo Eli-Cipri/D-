@@ -18,7 +18,7 @@ int main(int argc, char const *argv[])
     play_sound.stopMusicMenu();
     play_sound.playCrossroads();
     m.crossRoads();
-    m.ChestScene(player);
+    m.ChestScene(&player);
     play_sound.stopMusicCrr();
     enemy.generateEnemy();
     enemy.printEnemy();

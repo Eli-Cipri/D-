@@ -81,10 +81,10 @@ void misc::pres_any_key()
 
 
 
-void misc::ChestScene(Player& player)
+void misc::ChestScene(Player* player)
 {
-    clear_screen();
-    std::cout << player.name() << " comes across a chest." << std::endl;
+     clear_screen();
+    std::cout << player->getName() << " comes across a chest." << std::endl;
     std::cout << "Do you want to open it? (y/n)" << std::endl;
 
     char open_chest;
@@ -92,16 +92,7 @@ void misc::ChestScene(Player& player)
 
     if (open_chest == 'y') 
     {
-    addItemToInventory(player);
-    std::cout << "You have received the following items:" << std::endl;
-    for (const auto& item : player.inventory().items()) 
-    {
-      std::cout << item.name() << " x " << item.quantity() << std::endl;
-    }
-    } 
-    else 
-    {
-    std::cout << "You leave the chest unopened." << std::endl;
+        
     }
 }
 
