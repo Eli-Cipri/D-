@@ -1,7 +1,8 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 #include <iostream>
-
+#include <vector>
+#include "Item.h"
 
 
 #pragma once
@@ -26,7 +27,9 @@ public:
     int get_health();
     virtual void Attack();
     std::string getName() const;
-    
+    ClassType getClassType() const {return class_type_;}
+     void addItem(const Item& item) { items.push_back(item); }
+    const std::vector<Item>& getItems() const { return items; }
     
     
 private:
@@ -34,7 +37,7 @@ private:
     ClassType class_type_;
     int m_damage;
     int m_health;
-    
+    std::vector<Item> items;
 };
 
 #endif

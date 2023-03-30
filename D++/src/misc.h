@@ -8,6 +8,8 @@
 #include <conio.h>
 #include "Music.h"
 #include "Enemy.h"
+#include "Chest.h"
+
 
 
 
