@@ -51,6 +51,14 @@ std::string Player::getName(Item* item) const
     return name;
 }
 
+bool Player::isDead()
+{
+   if(m_health = 0)
+    {
+         std::cout << "You were defeated by " << enemy.getName() << ". Game over.\n";
+    } 
+}
+
 
 
 

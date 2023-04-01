@@ -4,6 +4,7 @@
 #include "Item.h"
 
 
+
 #pragma once
 
 
@@ -29,6 +30,7 @@ public:
     virtual void Attack();
     std::string getName(Item* item) const;
     ClassType getClassType() const {return class_type_;}
+    bool isDead();
     
     
     
