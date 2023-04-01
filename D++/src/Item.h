@@ -8,11 +8,16 @@ class Item
 {
 public:
     Item(std::string name);
+    Item();
     std::string getName() const { return name; }
-    virtual ~Item();
+    ~Item();
+    void addItem( Item* item);
+    const std::vector<Item*> getItems();
+    std::string getName(Item* item) const;
 
 private:
     std::string name;
+    std::vector<Item*> items;
 };
 
 #endif

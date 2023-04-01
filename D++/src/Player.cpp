@@ -4,7 +4,6 @@ Player::Player(std::string name)
 {
     this->name = name;
     
-
 }
 Player::Player()
 {
@@ -47,10 +46,12 @@ void Player::Attack()
     std::cout << "Attack" << std::endl;
 }
 
-std::string Player::getName() const
+std::string Player::getName(Item* item) const
 {
     return name;
 }
+
+
 
 
 
