@@ -2,7 +2,7 @@
 
 Rouge::Rouge()
 {
-    set_damage(20);
+    
     set_health(40);
 }
 

@@ -5,6 +5,7 @@ Player::Player(std::string name)
     this->name = name;
     
 }
+
 Player::Player()
 {
 
@@ -12,7 +13,10 @@ Player::Player()
 
 Player::~Player()
 {
-    
+    for(auto item: items)
+    {
+        delete item;
+    }
 }
 
 
@@ -29,8 +33,6 @@ void Player::set_health(const int& m_health)
     
 }
 
-
-
 int Player::get_damge()
 {
     return m_damage;
@@ -46,17 +48,13 @@ void Player::Attack()
     std::cout << "Attack" << std::endl;
 }
 
-
 bool Player::isDead()
 {
-   if(m_health = 0)
+   if(m_health < 1)
     {
-         std::cout << "You were defeated by\n";
-         std::cout << "Game Over" << std::endl;
-
+         return true;
     } 
-    return true;
-    
+    return false;  
 }
 
 std::vector<Item*> Player::addItem(Item* item)
@@ -68,6 +66,19 @@ std::vector<Item*> Player::addItem(Item* item)
 std::string Player::getName(Item* item) const
 {
     return name;
+}
+
+void Player::setClassType(ClassType type)
+{
+    class_type_ = type;
+}
+
+void Player::printItems()
+{
+      for (auto item : items) 
+        {
+            std::cout << "- " << item->getName() << "\n";
+        }
 }
 
 const std::vector<Item*> Player::getItems()

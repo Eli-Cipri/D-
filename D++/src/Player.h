@@ -9,7 +9,7 @@
 
 
 
-enum class ClassType {
+enum ClassType {
   WARRIOR,
   WIZARD,
   ROGUE
@@ -33,7 +33,9 @@ public:
     std::vector<Item*> addItem( Item* item);
     const std::vector<Item*> getItems();
     std::string getName(Item* item) const;
-    
+    void setClassType(ClassType type);
+    void printItems();
+    void takeDamage(int damage) {m_health -= damage;}
     
 private:
     std::string name;

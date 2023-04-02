@@ -8,7 +8,6 @@ class Item
 {
 public:
     Item(std::string name);
-    Item();
     std::string getName() const { return name; }
     ~Item();
     

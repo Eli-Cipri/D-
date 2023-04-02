@@ -8,7 +8,7 @@
 #include <conio.h>
 #include "Music.h"
 #include "Enemy.h"
-
+#include <memory>
 
 
 
@@ -29,15 +29,13 @@ public:
     bool introScene();
     void crossRoads();
     
-    Player* SetupPlayer();
+    void SetupPlayer();
     void pres_any_key();
-    void ChestScene(Player* player);
-    
-    
+    void ChestScene();
+    void battle();
     
 private:
-    
-   ;
+    std::unique_ptr<Player> player;
 };
 
 #endif

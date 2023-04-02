@@ -3,11 +3,8 @@
 // #include "Music.h"
 
 
-
-
-int main(int argc, char const *argv[])
-{   
-    
+void PlayGame()
+{
     Music play_sound;
     misc m;
     Enemy enemy ;
@@ -15,19 +12,17 @@ int main(int argc, char const *argv[])
     play_sound.inItSounds();
     play_sound.playMainMenu();
     m.introScene();
-    m.pres_any_key();
     play_sound.stopMusicMenu();
     play_sound.playCrossroads();
     m.crossRoads();
-    m.ChestScene(&player);
     play_sound.stopMusicCrr();
-    
-    
-    
-    
-    
-    
-    
-    
+    play_sound.playBattleFinal();
+    m.battle();
+    play_sound.stopMusicFb();
+}
+
+int main(int argc, char const *argv[])
+{   
+    PlayGame();
     return 0;
 }
