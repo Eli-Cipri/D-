@@ -1,6 +1,5 @@
 Acest proiect este bazat pe jocul Dungeons & Dragons si are la baza urmatoarele lucruri:
-D++ este un joc de strategie scris în C++, în care jucătorul trebuie să își construiască și să își dezvolte propriul sat, colectând resurse și construind clădiri. 
-Scopul jocului este de a-ți proteja satul de inamici și de a-ți îndeplini obiectivele pentru a avansa la nivelul următor. 
+D++ este un joc de strategie scris în C++, în care jucătorul trebuie să își protejze satul de inamici și de a-ți îndeplini obiectivele pentru a avansa la nivelul următor. 
 Jocul include elemente de management al resurselor și abilități de luare a deciziilor strategice. 
 D++ poate fi jucat ca un joc pentru un singur jucător, iar gameplay-ul poate fi personalizat. 
 Imbunătățit cu noi caracteristici și elemente, în funcție de preferințele jucătorului.
