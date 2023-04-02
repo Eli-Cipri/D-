@@ -94,12 +94,14 @@ switch (player->getClassType())
     pres_any_key();
         break;
 }
+
     // Ask player if they want to open the chest
     std::cout << "You find a chest along the path. Do you want to open it? (y/n)\n";
     char choice;
     std::cin >> choice;
     if (choice == 'y') 
     {
+        clear_screen();
         // Add items to player's inventory and print messages
         std::cout << "You open the chest and find the following items:\n";
    
@@ -109,15 +111,16 @@ switch (player->getClassType())
     else 
     {
         std::cout << "You leave the chest behind and continue on your journey.\n";
-        pres_any_key();
+        
 
     }
-
+    pres_any_key();
 }
 
 
 void misc::battle()
 {
+    
    std::cout << "An enemy has appeared! Get ready to fight!\n\n";
 
     std::vector<Enemy> enemies
@@ -132,7 +135,8 @@ void misc::battle()
     Enemy enemy = enemies[rand() % enemies.size()];
 
     // Battle loop
-    while (true) {
+    while (true) 
+    {
         // Player turn
         std::cout << "Player's turn\n";
         int playerDamage = rand() % 10 + 5;
@@ -155,6 +159,7 @@ void misc::battle()
             std::cout << "Game Over" << std::endl;
             return;
         }
+        pres_any_key();
     } 
 }
 
