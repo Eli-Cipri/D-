@@ -21,8 +21,7 @@ int main(int argc, char const *argv[])
     m.crossRoads();
     m.ChestScene(&player);
     play_sound.stopMusicCrr();
-    enemy.generateEnemy();
-    enemy.printEnemy();
+    
     
     
     

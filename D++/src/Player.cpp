@@ -46,20 +46,34 @@ void Player::Attack()
     std::cout << "Attack" << std::endl;
 }
 
-std::string Player::getName(Item* item) const
-{
-    return name;
-}
 
 bool Player::isDead()
 {
    if(m_health = 0)
     {
-         std::cout << "You were defeated by " << enemy.getName() << ". Game over.\n";
+         std::cout << "You were defeated by\n";
+         std::cout << "Game Over" << std::endl;
+
     } 
+    return true;
+    
 }
 
+std::vector<Item*> Player::addItem(Item* item)
+{
+     items.push_back(item);
+     return items;
+}
 
+std::string Player::getName(Item* item) const
+{
+    return name;
+}
+
+const std::vector<Item*> Player::getItems()
+{
+    return items;
+}
 
 
 

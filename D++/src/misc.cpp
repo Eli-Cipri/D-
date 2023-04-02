@@ -86,18 +86,17 @@ void misc::ChestScene(Player* player)
      clear_screen();
    
          // Create a chest and add items based on player's class_type
-    Item item;
     
 switch (player->getClassType()) {
     case ClassType::WARRIOR:
-        item.addItem(Item("Sword"));
+        player->addItem(new Item("Sword"));
         break;
     case ClassType::WIZARD:
-        item.addItem(Item("Magic Wand"));
+        player->addItem(new Item("Magic Wand"));
         break;
     case ClassType::ROGUE:
-        item.addItem(Item("Dagger"));
-        item.addItem(Item("Lockpick"));
+        player->addItem(new Item("Dagger"));
+        player->addItem(new Item("Lockpick"));
         break;
     
 }
@@ -109,8 +108,9 @@ switch (player->getClassType()) {
         // Add items to player's inventory and print messages
         std::cout << "You open the chest and find the following items:\n";
    
-        for (auto item : item.getItems()) {
-            item->addItem(item);
+        for (auto item : player->getItems()) 
+        {
+            player->addItem(item);
             std::cout << "- " << item->getName() << "\n";
         }
         std::cout << "You add the items to your inventory.\n";

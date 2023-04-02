@@ -28,10 +28,11 @@ public:
     int get_damge();
     int get_health();
     virtual void Attack();
-    std::string getName(Item* item) const;
     ClassType getClassType() const {return class_type_;}
     bool isDead();
-    
+    std::vector<Item*> addItem( Item* item);
+    const std::vector<Item*> getItems();
+    std::string getName(Item* item) const;
     
     
 private:
@@ -39,7 +40,7 @@ private:
     ClassType class_type_;
     int m_damage;
     int m_health;
-    
+    std::vector<Item*> items;
 };
 
 #endif

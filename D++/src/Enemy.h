@@ -16,9 +16,6 @@ public:
     virtual ~Enemy();
     
     void setEnemyType(const EnemyType& type );
-    const EnemyType getType();
-    EnemyType generateEnemy();
-    void printEnemy();
     std::string getName() const { return name; }
     int getHealth() const { return health; }
     void takeDamage(int damage) { health -= damage; }
